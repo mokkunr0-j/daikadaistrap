@@ -1,0 +1,15 @@
+= render 'header'
+
+div.text
+  h4 この内容で送信しますか？
+  = form_with(model: @monologue, local: true) do |form|
+    = form.hidden_field :content
+
+    h2.check = @monologue.content
+      | = @monologue.content
+      
+    = form.submit "つぶやく"
+    = form.submit "戻る", name: 'back'
+
+footer.footer
+  p フッターやで

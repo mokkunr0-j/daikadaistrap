@@ -1,0 +1,21 @@
+div.wrapper
+
+= render 'header'
+
+h1.head 過去のつぶやき
+
+div
+  p.notice =notice
+  table
+    tr
+    - @monologues.each do |monologue|
+      tr.ago
+        td.monologue_text = monologue.content
+        td.btn.btn_delete =link_to "削除", monologue_path(monologue.id), :method => :delete ,data: { confirm: '本当に削除していいですか？' }
+        td.btn.btn_edit =link_to "編集", edit_monologue_path(monologue.id)
+
+  div.btn.btn_tweet
+    = link_to 'つぶやく', new_monologue_path
+
+footer.footer
+  p フッターやで

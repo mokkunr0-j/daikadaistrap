@@ -1,0 +1,21 @@
+= form_with(model: @monologue, local: true, url: choose_new_or_edit) do |f|
+
+  - if @monologue.errors.any?
+    div#error_explanation
+      p
+        ul
+        - @monologue.errors.full_messages.each do |msg|
+          li = msg
+  /end
+
+  div.monologue_content
+    = f.text_area :content
+
+  div.bottun
+    = f.submit "つぶやく"
+
+
+/end
+
+div.back
+  = link_to '過去のつぶやきを見る', monologues_path

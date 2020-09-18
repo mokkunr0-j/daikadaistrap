@@ -1,0 +1,207 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body , html {
+   height: 100%;
+ }
+
+ .wrapper {
+   display: flex;
+   flex-direction: column;
+ }
+
+
+a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+nav {
+  background-color: pink;
+}
+
+.head {
+  text-align: center;
+  margin-right: 9%;
+}
+
+.menu li {
+  float: left;
+  width: auto;
+  padding: 5px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.dashboard {
+  background-color: #efecec;
+  background-clip: inherit;
+  border: 1px solid #e1e8ed;
+  border-radius: 5px;
+  line-height: inherit;
+  padding: 15px;
+  margin: 15px;
+  margin-left: 9%;
+  float: left;
+}
+
+.text {
+  background-color: #efecec;
+  background-clip: inherit;
+  border: 1px solid #e1e8ed;
+  border-radius: 5px;
+  line-height: inherit;
+  padding: 15px;
+  margin: 15px;
+  margin-top: 0;
+  margin-right: 9%;
+  float: left;
+  width: 50%;
+}
+
+.ago {
+  background-color: #efecec;
+  background-clip: inherit;
+  border: 1px solid #e1e8ed;
+  border-radius: 5px;
+  line-height: inherit;
+  padding: 15px;
+  margin: 15px;
+  margin-top: 0;
+  margin-right: 9%;
+  float: left;
+  width: 80%;
+}
+
+li {
+  list-style: none;
+}
+
+.main {
+  color: green;
+  text-align: center;
+}
+
+.monologue_content {
+  text-align: center;
+}
+
+
+.monologue_text {
+  text-align: left;
+  width: 85%;
+}
+
+.bottun {
+  text-align: center;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.back {
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 0.2%;
+}
+
+.back a {
+  display: contents;
+  color: blue;
+}
+
+textarea#monologue_content {
+  width: 500px;
+  height: 60px;
+  text-align: start;
+  padding: revert;
+  margin: 10px;
+}
+
+.content {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.check {
+  word-wrap: break-word;
+}
+
+
+.btn {
+  color: white;
+  border: 1px solid transparent;
+}
+
+.btn :hover {
+  opacity: 0.7;
+}
+
+.btn_edit {
+  font-size: 15px;
+  background-color: #84e484;
+  width: 7%;
+  margin: 1px;
+  line-height: 1.5;
+  border-radius: 3px;
+  text-align: center;
+  float: right;
+}
+
+.btn_delete {
+  font-size: 15px;
+  background-color: red;
+  width: 7%;
+  margin: 1px;
+  line-height: 1.5;
+  border-radius: 3px;
+  text-align: center;
+  float: right;
+}
+
+.btn_tweet {
+  margin: auto;
+  text-align: center;
+  background-color: aqua;
+  width: 8%;
+  margin-left: 60%;
+  margin-bottom: 6%;
+
+}
+
+.notice {
+  margin-left: 58%;
+}
+
+footer {
+  text-align: center;
+  background-color: grey;
+  width: 100%;
+  display: table;
+  color: yellow;
+  margin-top: 50px;
+  position: fixed;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+}
