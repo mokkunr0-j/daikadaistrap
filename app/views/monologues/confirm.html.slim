@@ -7,9 +7,9 @@ div.text
 
     h2.check = @monologue.content
       | = @monologue.content
-      
-    = form.submit "つぶやく"
-    = form.submit "戻る", name: 'back'
+
+    = form.submit "つぶやく", class: "btn btn-success"
+    = form.submit "戻る", name: 'back', class: "btn btn-primary"
 
 footer.footer
-  p フッターやで
+  p もっくんの課題です

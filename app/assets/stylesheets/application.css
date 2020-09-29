@@ -166,35 +166,7 @@ textarea#monologue_content {
   word-wrap: break-word;
 }
 
-.btn_edit {
-  font-size: 15px;
-  background-color: #84e484;
-  margin: 1px;
-  line-height: 1.5;
-  border-radius: 3px;
-  text-align: center;
-  width: 70px;
-  padding: 12px 0;
-}
-
-.btn_delete {
-  font-size: 15px;
-  background-color: red;
-  margin: 1px;
-  line-height: 1.5;
-  border-radius: 3px;
-  text-align: center;
-  width: 70px;
-  padding: 12px 0;
-}
-
-.btn_tweet {
-  text-align: center;
-  background-color: aqua;
-  margin-top: 10px;
-  margin-left: 46%;
-  width: 120px;
-  padding: 14px 0;
+.btn-info {
   margin-bottom: 35px;
 }
 
