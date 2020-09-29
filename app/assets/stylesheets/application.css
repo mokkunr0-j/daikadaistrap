@@ -10,6 +10,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap/dist/css/bootstrap.min
  *= require_tree .
  *= require_self
  */
@@ -23,26 +24,38 @@ body , html {
    flex-direction: column;
  }
 
+ .title {
+   font-size: 18px;
+   color: white;
+   margin-top: 20px;
+ }
+
 
 a {
   text-decoration: none;
   color: white;
   display: block;
+  margin: 7px;
 }
 
-nav {
-  background-color: pink;
+.navbar-default {
+  background-color: #2d522d;
+  border-color: #e7e7e7;
+}
+
+p {
+  margin-bottom: 5px;
 }
 
 .head {
   text-align: center;
-  margin-right: 9%;
 }
 
-.menu li {
+.barmenu li {
   float: left;
   width: auto;
   padding: 5px;
+  margin-left: 25px;
 }
 
 .clearfix:after {
@@ -58,9 +71,6 @@ nav {
   border-radius: 5px;
   line-height: inherit;
   padding: 15px;
-  margin: 15px;
-  margin-left: 9%;
-  float: left;
 }
 
 .text {
@@ -70,11 +80,8 @@ nav {
   border-radius: 5px;
   line-height: inherit;
   padding: 15px;
-  margin: 15px;
-  margin-top: 0;
-  margin-right: 9%;
-  float: left;
-  width: 50%;
+
+  margin: 2%;
 }
 
 .ago {
@@ -84,21 +91,27 @@ nav {
   border-radius: 5px;
   line-height: inherit;
   padding: 15px;
-  margin: 15px;
-  margin-top: 0;
-  margin-right: 9%;
-  float: left;
-  width: 840px;
+  margin-top: 10px;
 }
 
 li {
   list-style: none;
 }
+ul {
+  margin-top: 10px;
+}
+
+a:hover{
+  color: yellow;
+  text-decoration: none;
+}
+
 
 .main {
   color: green;
   text-align: center;
 }
+
 
 .monologue_content {
   text-align: center;
@@ -106,8 +119,8 @@ li {
 
 
 .monologue_text {
+  font-size: 18px;
   text-align: left;
-  width: 85%;
 }
 
 .bottun {
@@ -129,8 +142,12 @@ input[type="submit"] {
   color: blue;
 }
 
+.back a:hover{
+  color: red;
+}
+
 textarea#monologue_content {
-  width: 500px;
+  width: 90%;
   height: 60px;
   text-align: start;
   padding: revert;
@@ -149,58 +166,52 @@ textarea#monologue_content {
   word-wrap: break-word;
 }
 
+.btn_edit {
+  font-size: 15px;
+  background-color: #84e484;
+  margin: 1px;
+  line-height: 1.5;
+  border-radius: 3px;
+  text-align: center;
+  width: 70px;
+  padding: 12px 0;
+}
 
-.btn {
-  color: white;
-  border: 1px solid transparent;
+.btn_delete {
+  font-size: 15px;
+  background-color: red;
+  margin: 1px;
+  line-height: 1.5;
+  border-radius: 3px;
+  text-align: center;
+  width: 70px;
+  padding: 12px 0;
+}
+
+.btn_tweet {
+  text-align: center;
+  background-color: aqua;
+  margin-top: 10px;
+  margin-left: 46%;
+  width: 120px;
+  padding: 14px 0;
+  margin-bottom: 35px;
 }
 
 .btn :hover {
   opacity: 0.7;
 }
 
-.btn_edit {
-  font-size: 15px;
-  background-color: #84e484;
-  width: 7%;
-  margin: 1px;
-  line-height: 1.5;
-  border-radius: 3px;
-  text-align: center;
-  float: right;
-}
-
-.btn_delete {
-  font-size: 15px;
-  background-color: red;
-  width: 7%;
-  margin: 1px;
-  line-height: 1.5;
-  border-radius: 3px;
-  text-align: center;
-  float: right;
-}
-
-.btn_tweet {
-  margin: auto;
-  text-align: center;
-  background-color: aqua;
-  width: 8%;
-  margin-left: 60%;
-  margin-bottom: 6%;
-
-}
-
 .notice {
-  margin-left: 58%;
+  text-align: center;
 }
 
 footer {
-  text-align: center;
-  background-color: grey;
+  text-align: left;
+  background-color: #2d522d;
   width: 100%;
   display: table;
-  color: yellow;
+  color: white;
   margin-top: 50px;
   position: fixed;/*←絶対位置*/
   bottom: 0; /*下に固定*/

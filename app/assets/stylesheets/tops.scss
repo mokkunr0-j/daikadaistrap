@@ -1,0 +1,32 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+img {
+  width: 70%;
+}
+
+.navbar {
+  margin-bottom: 5px;
+}
+
+.pic {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.btn_in_top {
+    background-color:#a4eab9;
+    color:#fff;
+    padding:7px 0;
+    box-sizing: border-box;
+    border: solid 1px #fff;
+    text-align: center;
+    height: 35px;
+  }
+
+
+.blank {
+  background-color: white;
+  padding: 0;
+}

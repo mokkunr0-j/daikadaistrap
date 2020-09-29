@@ -2,10 +2,17 @@ div.wrapper
 
 = render 'header'
 
-h1.head 編集する
-
-div.text.clearfix
- = render 'form'
+.container
+  .row
+    div.dashboard.col-sm-3
+      h4 Twitter風webアプリ
+      p このサイトはruby on railsの練習として作成されました。
+      p 今後ともごひいきに。
+    .col-sm-9
+      .row
+        h1.head 編集する
+      .row
+        = render 'form'
 
 footer.footer
   p フッターやで

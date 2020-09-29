@@ -12,3 +12,25 @@ nav.navbar.navbar-default
         li =link_to 'ホーム', root_path
         li =link_to '今をつぶやく', new_monologue_path
         li =link_to '過去のつぶやき', monologues_path
+
+div.pic
+  = image_tag "uguisu.jpg"
+
+div
+  div.row
+    div.dashboard.col-xs-8.col-xs-offset-2
+      h4 Twitter風webアプリ
+      p このサイトはruby on railsの練習として作成されました。
+      p 今後ともごひいきに。
+
+
+
+div.contents
+   div
+     =link_to '今をつぶやく', new_monologue_path, class: "col-md-3 col-md-offset-3 btn_in_top"
+     =link_to '過去のつぶやき', monologues_path, class: "col-md-3 btn_in_top"
+
+
+
+footer.footer
+ p フッターやで

@@ -4,18 +4,18 @@ div.wrapper
 
 h1.head 過去のつぶやき
 
-div
+div.row
   p.notice =notice
-  table
-    tr
+  div.col-sm-8.col-sm-offset-2
     - @monologues.each do |monologue|
-      tr.ago
-        td.monologue_text = monologue.content
-        td.btn.btn_delete =link_to "削除", monologue_path(monologue.id), :method => :delete ,data: { confirm: '本当に削除していいですか？' }
-        td.btn.btn_edit =link_to "編集", edit_monologue_path(monologue.id)
+      div.ago.row
+        div.monologue_text.col-xs-10 = monologue.content
+        div.col-xs-2
+          =link_to "編集", edit_monologue_path(monologue.id), class:"btn btn_edit"
+          =link_to "削除", monologue_path(monologue.id), class:"btn btn_delete", :method => :delete ,data: { confirm: '本当に削除していいですか？' }
 
-  div.btn.btn_tweet
-    = link_to 'つぶやく', new_monologue_path
+  = link_to 'つぶやく', new_monologue_path, class: "btn btn_tweet"
+
 
 footer.footer
   p フッターやで
