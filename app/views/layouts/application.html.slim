@@ -1,0 +1,37 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title Daikadai
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+  body
+    nav.navbar.navbar-default
+      div.container-fluid
+        div.navbar-header
+          button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi"
+            span.sr-only 〜うぐいすのつぶやき〜
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          p.title 〜うぐいすのつぶやき〜
+        div#gnavi.collapse.navbar-collapse
+          ul.barmenu.clearfix
+            li =link_to 'ホーム', root_path
+            li =link_to '今をつぶやく', new_monologue_path
+            li =link_to '過去のつぶやき', monologues_path
+            li
+                - flash.each do |key, value|
+                  = content_tag(:div, value, class: "#{key}")
+                - if logged_in?
+                  li = link_to "ユーザー情報", user_path(current_user.id)
+                  li = link_to "ログアウト", session_path(current_user.id), method: :delete
+                - else
+                  li = link_to "アカウント作成", new_user_path
+                  li = link_to "ログイン", new_session_path
+    = yield
+    footer.footer
+      p うぐいすのつぶやき from diver

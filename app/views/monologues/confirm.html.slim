@@ -1,5 +1,3 @@
-= render 'header'
-
 div.text
   h4 この内容で送信しますか？
   = form_with(model: @monologue, local: true) do |form|
@@ -10,6 +8,3 @@ div.text
 
     = form.submit "つぶやく", class: "btn btn-success"
     = form.submit "戻る", name: 'back', class: "btn btn-primary"
-
-footer.footer
-  p うぐいすのつぶやき from diver

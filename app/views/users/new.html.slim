@@ -1,0 +1,22 @@
+.row
+  .col-xs-offset-1
+
+    h1 アカウントを作る
+
+    - if @user.errors.any?
+      div#error_explanation
+        h2 = "#{pluralize(@user.errors.count, "error")} prohibited this #{ @user.name} from being saved:"
+        ul
+        - @user.errors.full_messages.each do |message|
+          li = message
+
+    = form_with(model: @user, local: true) do |f|
+      li = f.label :'名前(ニックネーム)'
+      li = f.text_field :name
+      li = f.label :'メールアドレス'
+      li = f.email_field :email
+      li = f.label :'パスワード'
+      li = f.password_field :password
+      li = f.label :'パスワード(確認用)'
+      li = f.password_field :password_confirmation
+      li = f.submit "送信", class:'btn btn-info' 
