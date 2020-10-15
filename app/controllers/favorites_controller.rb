@@ -9,6 +9,10 @@ class FavoritesController < ApplicationController
     redirect_to url, notice: "#{favorite.monologue.user.name}さんのつぶやきをお気に入り解除しました"
   end
   def index
-    @user_favorites = current_user.favorites
+    if current_user == nil
+      redirect_to new_session_path
+    else
+      @user_favorites = current_user.favorites
+    end
   end
 end
