@@ -1,0 +1,16 @@
+current directory: /Users/yamada/workspace/daikadai/vendor/bundle/ruby/2.7.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+/Users/yamada/.rbenv/versions/2.7.1/bin/ruby -I /Users/yamada/.rbenv/versions/2.7.1/lib/ruby/2.7.0 -r ./siteconf20201006-39288-1lqd6e4.rb extconf.rb
+
+current directory: /Users/yamada/workspace/daikadai/vendor/bundle/ruby/2.7.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/yamada/workspace/daikadai/vendor/bundle/ruby/2.7.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/yamada/workspace/daikadai/vendor/bundle/ruby/2.7.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

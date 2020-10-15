@@ -20,18 +20,16 @@ html
           p.title 〜うぐいすのつぶやき〜
         div#gnavi.collapse.navbar-collapse
           ul.barmenu.clearfix
-            li =link_to 'ホーム', root_path
-            li =link_to '今をつぶやく', new_monologue_path
-            li =link_to '過去のつぶやき', monologues_path
+            li.head =link_to 'ホーム', root_path
+            li.head =link_to '今をつぶやく', new_monologue_path
+            li.head =link_to '過去のつぶやき', monologues_path
             li
-                - flash.each do |key, value|
-                  = content_tag(:div, value, class: "#{key}")
                 - if logged_in?
-                  li = link_to "ユーザー情報", user_path(current_user.id)
-                  li = link_to "ログアウト", session_path(current_user.id), method: :delete
+                  li.head = link_to "ユーザー情報", user_path(current_user.id)
+                  li.head = link_to "ログアウト", session_path(current_user.id), method: :delete
                 - else
-                  li = link_to "アカウント作成", new_user_path
-                  li = link_to "ログイン", new_session_path
+                  li.head = link_to "アカウント作成", new_user_path
+                  li.head = link_to "ログイン", new_session_path
     = yield
     footer.footer
       p うぐいすのつぶやき from diver

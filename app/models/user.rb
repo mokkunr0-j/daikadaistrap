@@ -5,4 +5,6 @@ class User < ApplicationRecord
   validates :password, length: { in: 8..32 }
   before_validation { email.downcase! }
   has_secure_password
+  has_many :monologues
+  has_many :favorites, dependent: :destroy
 end

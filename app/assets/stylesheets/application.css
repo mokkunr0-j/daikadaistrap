@@ -19,6 +19,7 @@ body , html {
    height: 100%;
  }
 
+
  .title {
    font-size: 18px;
    color: white;
@@ -30,7 +31,6 @@ a {
   text-decoration: none;
   color: white;
   display: block;
-  margin: 7px;
 }
 
 .navbar-default {
@@ -43,6 +43,14 @@ p {
 }
 
 .head {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+h1.daiji {
+  margin-top: 25px;
+  margin-bottom: : 20px;
   text-align: center;
 }
 
@@ -122,6 +130,10 @@ a:hover{
   text-align: center;
 }
 
+.btnmargin {
+  margin: 5px;
+}
+
 input[type="submit"] {
   cursor: pointer;
 }
@@ -161,7 +173,8 @@ textarea#monologue_content {
   word-wrap: break-word;
 }
 
-.btn-info {
+.btnbottom {
+  margin-top: 15px;
   margin-bottom: 35px;
 }
 

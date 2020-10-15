@@ -2,7 +2,7 @@ class MonologuesController < ApplicationController
   before_action :set_monologue, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:new, :show, :edit, :update, :destroy]
   def index
-    @monologues = Monologue.all.order(id: "DESC")
+    @monologues = Monologue.all.order(id: "DESC")    
   end
 
   def new
@@ -10,12 +10,12 @@ class MonologuesController < ApplicationController
   end
 
   def create
-    @monologue = Monologue.new(monologue_params)
+    @monologue = current_user.monologues.build(monologue_params)
     if params[:back]
       render :new
     else
       if @monologue.save
-        redirect_to monologues_path, notice: "つぶやきを投稿しました！"
+        redirect_to monologues_path ,notice: "つぶやきを投稿しました！"
       else
         render :new
       end
@@ -23,6 +23,7 @@ class MonologuesController < ApplicationController
   end
 
   def show
+    @favorite = current_user.favorites.find_by(monologue_id: @monologue.id)
   end
 
   def edit
@@ -42,7 +43,7 @@ class MonologuesController < ApplicationController
   end
 
   def confirm
-    @monologue = Monologue.new(monologue_params)
+    @monologue = current_user.monologues.build(monologue_params)
     render :new if @monologue.invalid?
   end
 

@@ -1,0 +1,15 @@
+h1.daiji #{@current_user.name}さんのお気に入り一覧
+
+div.row
+
+  div.col-sm-6.col-sm-offset-3
+    p.notice = notice
+
+    - @user_favorites.each do |favorite|
+
+      div.ago.row
+        div.monologue_text.col-xs-10 = favorite.monologue.content
+        div.col-xs-2
+        li
+        li
+          =link_to "お気に入り解除", favorite_path(id: favorite.id), class:"btn btn-default btnmargin", :method => :delete, data: { confirm: '本当にお気に入り解除していいですか？' }
