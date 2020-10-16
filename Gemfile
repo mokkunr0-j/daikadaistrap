@@ -61,3 +61,5 @@ gem 'slim-rails'
 gem 'slim'
 
 gem 'bcrypt', '3.1.11'
+
+gem 'faker'
