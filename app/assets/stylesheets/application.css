@@ -126,6 +126,11 @@ a:hover{
   text-align: left;
 }
 
+.monologue_image {
+  width: 400px;
+}
+
+
 .bottun {
   text-align: center;
 }

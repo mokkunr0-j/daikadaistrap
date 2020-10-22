@@ -2,9 +2,19 @@ div.text
   h4 この内容で送信しますか？
   = form_with(model: @monologue, local: true) do |form|
     = form.hidden_field :content
+    = form.hidden_field :image_cache
 
     h2.check = @monologue.content
       | = @monologue.content
+
+    - if @monologue.image_cache == nil
+
+      p 添付画像はありません
+
+    - else
+
+      div = image_tag @monologue.image.url
+
 
     = form.submit "つぶやく", class: "btn btn-success"
     = form.submit "戻る", name: 'back', class: "btn btn-primary"

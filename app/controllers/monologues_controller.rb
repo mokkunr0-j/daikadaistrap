@@ -2,7 +2,7 @@ class MonologuesController < ApplicationController
   before_action :set_monologue, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:new, :show, :edit, :update, :destroy]
   def index
-    @monologues = Monologue.all.order(id: "DESC")    
+    @monologues = Monologue.all.order(id: "DESC")
   end
 
   def new
@@ -50,7 +50,7 @@ class MonologuesController < ApplicationController
 
   private
   def monologue_params
-    params.require(:monologue).permit(:content)
+    params.require(:monologue).permit(:content, :image, :image_cache)
   end
   def set_monologue
     @monologue = Monologue.find(params[:id])

@@ -13,8 +13,12 @@ div
       div.monologue_content
         = f.text_area :content
 
+      div.field
+        = f.label :image
+        = f.file_field :image
+
       div.bottun
-        = f.submit "つぶやく", class: "btn btn-default"
+        = f.submit "つぶやく", class: "btn btn-info"
 
 
     /end

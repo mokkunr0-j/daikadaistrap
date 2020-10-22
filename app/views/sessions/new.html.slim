@@ -1,5 +1,6 @@
 .row
   .col-xs-offset-1
+    h2 = notice
     h1 ログイン
     = form_with(scope: :session, url: sessions_path, local: true) do |f|
       li = f.label :'メールアドレス'

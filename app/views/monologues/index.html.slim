@@ -6,15 +6,26 @@ div.row
     - if current_user == nil
       - @monologues.each do |monologue|
         div.ago.row
-          div.monologue_text = monologue.content
+          div.monologue_text.col-xs-7 = monologue.content
+          div
+          - if monologue.image.url == nil
+            p.col-xs-3
+          -else
+            =image_tag monologue.image.url , class:"monologue_image col-xs-3"
+
     - else
       p.notice = notice
       - @monologues.each_with_index do |monologue, idx|
         - fav = Favorite.find_by(user_id: current_user.id, monologue_id: monologue.id)
 
         div.ago.row
-          div.monologue_text.col-xs-9 = monologue.content
-          div.col-xs-3
+          div.monologue_text.col-xs-6 = monologue.content
+          div
+          - if monologue.image.url == nil
+            p.col-xs-3
+          -else
+            =image_tag monologue.image.url , class:"monologue_image col-xs-3"
+
           li
           //- fav = @favs[idx]
           li
